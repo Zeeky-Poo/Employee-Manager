@@ -4,23 +4,6 @@
  * @author ezekielnwafor
  */
 public class SalariedEmployee extends employee{
-
-    /**
-     * @return the hourlyRate
-     */
-    public double getHourlyRate() {
-        return hourlyRate;
-    }
-
-    /**
-     * @param hourlyRate the hourlyRate to set
-     */
-    public void setHourlyRate(double hourlyRate) {
-        this.hourlyRate = hourlyRate;
-    }
-    
-    //hourly pay for a salaried employee
-    private double hourlyRate;
     
     /*
         The constructor will make a call to the super class' constructor
@@ -29,7 +12,24 @@ public class SalariedEmployee extends employee{
         
         super(lastName, firstName, 45000, 3.3, false, true, true);
         
-        hourlyRate = (((45000/12)/4)/40);
+        //salried employees are not overtime eligible.
+        this.setOtPayRate(0);
+        
     }
     
+    @Override
+    public void otInfo(){
+        
+        String fN;
+        String lN;
+        double otRate;
+        
+        fN = this.getFirstName();
+        lN = this.getLastName();
+        
+        System.out.println("Employee, " + fN + " " + lN +", is a Salaried employee and is not eligible for"
+                          + "overtime. convert the emplyee to an hourly employee in order to pay overtime.");
+    }
+    
+  
 }

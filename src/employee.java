@@ -2,20 +2,24 @@
  *
  * @author ezekielnwafor
  */
-public class employee {
+public abstract class employee {
+    
     
     private static int employeeCT = 0;
     private static int employeeID;
     private int jobRatting;
     private double salary;
     private double raisePercentage;
+    private double otPayRate;
+    private double hourlyRate;
     
     private String lastName;
     private String firstName;
     
     private boolean otEligible;
     private boolean raiseEligible;
-   private boolean promotible;
+    private boolean promotible;
+    
    
    // constructor
    public employee(String firstName, String lastName, double salary, double raisePercentage,
@@ -28,6 +32,8 @@ public class employee {
        jobRatting = 5;
        this.salary = salary;
        this.raisePercentage = raisePercentage;
+       hourlyRate = (((salary/12)/4)/40);
+       otPayRate = hourlyRate*1.5;
        this.otEligible = otEligible;
        this.raiseEligible = raiseEligible;
        this.promotible = promotible;
@@ -174,4 +180,37 @@ public class employee {
     protected void setEmployeeID(int employeeID) {
         this.employeeID = employeeID;
     }
+    
+    /**
+     * @return the otPayRate
+     */
+    public double getOtPayRate() {
+        return otPayRate;
+    }
+
+    /**
+     * @param otPayRate the otPayRate to set
+     */
+    public void setOtPayRate(double otPayRate) {
+        this.otPayRate = otPayRate;
+    }
+    
+     /**
+     * @return the hourlyRate
+     */
+    public double getHourlyRate() {
+        return hourlyRate;
+    }
+
+    /**
+     * @param hourlyRate the hourlyRate to set
+     */
+    public void setHourlyRate(double hourlyRate) {
+        this.hourlyRate = hourlyRate;
+    }
+
+    
+    
+    public abstract void otInfo();
+    
 }
