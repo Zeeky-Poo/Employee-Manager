@@ -22,7 +22,6 @@ public class SalariedEmployee extends employee{
         
         String fN;
         String lN;
-        double otRate;
         
         fN = this.getFirstName();
         lN = this.getLastName();
