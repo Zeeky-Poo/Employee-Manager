@@ -7,7 +7,6 @@
 //import statement(s)
 import java.util.ArrayList; //an array list will be used to store the arraylist
 import java.util.Scanner; //the scanner will be used to handle user input
-
 /**
  *
  * @author ezekielnwafor
@@ -33,24 +32,35 @@ public class EmployeeManager {
      * This method will take the values from one object, copy them, then create a new object of a different type.
      * This object will have the same values as it did prior.
      */
-    private void promoteEmployee(){
+    public void promoteEmployee(){
         
-        boolean correctInput = false;
+        //count the matched from the search portion
+        int matchCt;
         
         String firstName;
         String lastName;
         
-        while(correctInput){
+        //ArrayList to store the matches from the search 
+        ArrayList <employee> matches = new <employee> ArrayList();
+        
+        //get user input for employee first and last name
+        System.out.print("Please enter the first name of the employee that you wish to promote: ");
+        firstName = scan.next();
+        scan.nextLine();
+        
+        System.out.print("\n");
+         
+        System.out.print("Please enter the last name of the empoyee: ");
+        lastName = scan.next();
+        scan.nextLine();
+        
+        System.out.print("\n");
+        
+        //loop through list of employees to find matching first and last name
+        for(employee e : employeeList){
             
-            try{
-                System.out.print("Please enter the employees first name: ");
-                
-                firstName = scan.next();
-            }
-            
-            catch 
         }
-       
+        
+        }
     }
     
-}

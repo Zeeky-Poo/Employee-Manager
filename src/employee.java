@@ -208,9 +208,4 @@ public abstract class employee {
     public void setHourlyRate(double hourlyRate) {
         this.hourlyRate = hourlyRate;
     }
-
-    
-    
-    public abstract void otInfo();
-    
 }

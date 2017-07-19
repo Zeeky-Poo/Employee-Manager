@@ -39,19 +39,4 @@ this.setOtPayRate(0);
     public void setContractLength(int contractLength) {
         this.contractLength = contractLength;
     }
-    
-     @Override
-    public void otInfo(){
-        
-        String fN;
-        String lN;
-        
-        fN = this.getFirstName();
-        lN = this.getLastName();
-        
-        System.out.println("Employee, " + fN + " " + lN +", is a Contracted employee and is not eligible for"
-                          + "overtime. convert the emplyee to an hourly employee in order to pay overtime.");
-    }
-    
-    
 }
